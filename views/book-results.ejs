@@ -10,11 +10,15 @@
 </head>
 <body>
   <ul>
-    <li>placeholder book (DUNE)</li>
-    <% books.forEach(book => { %>
-      <li><%= book.title%></li>
-      <li><%= book.author%></li>
-      <li><%=  %></li>
+  
+    <% objectArray.forEach(objectArray => { %>
+        <h3>Book Title: <%= objectArray.title%></h3>
+        <p><%=  %></p>
+        <h3>Author: <%= objectArray.author%></h3>
+        <ul><%=  %></ul>
+        <ul><%=  %></ul>
+        <p><%=  %></p>
+        <p><%=  %></p>
     <%}) %>
   </ul>
 </body>
