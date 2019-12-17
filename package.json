@@ -1,0 +1,28 @@
+{
+  "name": "lab-11-ejs",
+  "version": "1.0.0",
+  "description": "lab 11 Joshua and Peter",
+  "main": "server.js",
+  "dependencies": {
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "i": "^0.3.6",
+    "superagent": "^5.1.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/petewhartnett/lab-11-ejs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/petewhartnett/lab-11-ejs/issues"
+  },
+  "homepage": "https://github.com/petewhartnett/lab-11-ejs#readme"
+}
