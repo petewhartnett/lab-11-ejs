@@ -5,20 +5,49 @@
 **Author**: Joshua and Peter
 **Version**: 1.0.0 (increment the patch/fix version number if you make more commits past your first submission)
 
-## Overview
-<!-- Provide a high level overview of what this application is and why you are building it, beyond the fact that it's an assignment for a Code 301 class. (i.e. What's your problem domain?) -->
+Number and name of feature: Inital Set up of local server
 
-## Getting Started
-<!-- What are the steps that a user must take in order to build this app on their own machine and get it running? -->
+Estimate of time needed to complete: 1 hr
 
-## Architecture
-<!-- Provide a detailed description of the application design. What technologies (languages, libraries, etc) you're using, and any other relevant design information. -->
+Start time: 9am
 
-## Change Log
-<!-- Use this area to document the iterative changes made to your application as each feature is successfully implemented. Use time stamps. Here's an examples:
+Finish time: 9:50am
 
-01-01-2001 4:59pm - Application now has a fully-functional express server, with GET and POST routes for the book resource.
+Actual time needed to complete: 50 minutes
 
-## Credits and Collaborations
-<!-- Give credit (and a link) to other people or resources that helped you build this application. -->
--->
+
+Number and name of feature: Google API Set Up 
+
+Estimate of time needed to complete: 1 hr
+
+Start time: 9:50am
+
+Finish time: 10:45am
+
+Actual time needed to complete: 11:35am
+
+
+Number and name of feature: Browse Search Results
+
+Estimate of time needed to complete: 1 hr
+
+Start time: 11:30am
+
+Finish time: 12:30pm
+
+Actual time needed to complete: 1hour 
+
+
+Number and name of feature: 4-6
+Estimate of time needed to complete: 1 hr
+
+Start time: 12:30pm
+
+Finish time: 1:30pm
+
+Actual time needed to complete: 1hour 
+
+
+
+
+
