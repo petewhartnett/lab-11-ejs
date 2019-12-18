@@ -3,6 +3,12 @@
 const express = require('express');
 const ejs = require('ejs');
 const superagent = require('superagent');
+const pg = require('pg');
+
+
+const client = new pg.Client(process.env.DATABASE_URL);
+client.connect();
+client.on('error', err => console.error(err));
 
 const app = express();
 app.use(express.urlencoded({ extended: true }));
@@ -20,11 +26,13 @@ function GoogleBooks(books) {
     this.author = books.author;
 
 }
-//app.get('/styles/styles.css', function(req, res){ res.send('/styles/styles.css'); res.end(); });
+app.get('/styles/styles.css', function(req, res){ res.send('/styles/styles.css'); res.end(); });
+
 
 
 app.post('/', (req, res) => {
     const googleBookData = `https://www.googleapis.com/books/v1/volumes?q=author+inauthor:${req.body.author} `
+    console.log(req.body.author)
     superagent.get(googleBookData).then(bookData => {
         //console.log(bookData);
         const books = bookData.body.items.map(book => ({ title: book.volumeInfo.title, author: book.volumeInfo.authors }));
@@ -45,26 +53,26 @@ app.post('/', (req, res) => {
 });
 
 
-app.post('/', (req, res) => {
-    const googleBookData = `https://www.googleapis.com/books/v1/volumes?q=book+ibook:${req.body.title} `
-    superagent.get(googleBookData).then(bookData => {
-        //console.log(bookData);
-        const books = bookData.body.items.map(book => ({ title: book.volumeInfo.title, author: book.volumeInfo.authors }));
-       // console.log(books);
+// app.post('/', (req, res) => {
+//     const googleBookData = `https://www.googleapis.com/books/v1/volumes?q=book+ibook:${req.body.Book} `
+//     superagent.get(googleBookData).then(bookData => {
+//         //console.log(bookData);
+//         const books = bookData.body.items.map(book => ({ title: book.volumeInfo.title, author: book.volumeInfo.authors }));
+//        // console.log(books);
         
-        var objectArray = [];
+//         var objectArray = [];
      
 
-    books.map(newBook => objectArray.push(new GoogleBooks(newBook)));
-    console.log (objectArray);
+//     books.map(newBook => objectArray.push(new GoogleBooks(newBook)));
+//     console.log (objectArray);
 
-        res.render('book-results', {
-            objectArray: objectArray
-        });
-    });
+//         res.render('book-results', {
+//             objectArray: objectArray
+//         });
+//     });
    
     
-});
+// });
 
 app.get('/*', function(request, response){
     response.status(404).send('Try again!')
