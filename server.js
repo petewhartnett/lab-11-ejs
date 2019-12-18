@@ -40,10 +40,7 @@ app.post('/', (req, res) => {
             objectArray: objectArray
         });
     });
-   
-    
 });
-
 
 app.post('/', (req, res) => {
     const googleBookData = `https://www.googleapis.com/books/v1/volumes?q=book+ibook:${req.body.title} `
